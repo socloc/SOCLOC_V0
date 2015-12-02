@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MAC</Machine>
+    <WindowsUser>maciek</WindowsUser>
+    <TargetPlatformIdentifier>Windows Phone</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>a30282ef-8ec4-49eb-8d60-d39468bd41c4</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Bin\Debug\SocLoc_project_WP.dll">
+      <PackagePath>SocLoc_project_WP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\ServiceReferences.ClientConfig">
+      <PackagePath>ServiceReferences.ClientConfig</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\AlignmentGrid.png">
+      <PackagePath>Assets\AlignmentGrid.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\ApplicationIcon.png">
+      <PackagePath>Assets\ApplicationIcon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\BadgeLogo.png">
+      <PackagePath>Assets\BadgeLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\SquareTile150x150.png">
+      <PackagePath>Assets\SquareTile150x150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\SquareTile71x71.png">
+      <PackagePath>Assets\SquareTile71x71.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\WideLogo.png">
+      <PackagePath>Assets\WideLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\FlipCycleTileLarge.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileLarge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\FlipCycleTileMedium.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileMedium.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\FlipCycleTileSmall.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileSmall.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\IconicTileMediumLarge.png">
+      <PackagePath>Assets\Tiles\IconicTileMediumLarge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\IconicTileSmall.png">
+      <PackagePath>Assets\Tiles\IconicTileSmall.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SocLoc_project_WP\SocLoc_project_WP\Bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
