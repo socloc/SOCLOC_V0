@@ -95,7 +95,10 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="DatabaseHandler.cs" />
+    <Compile Include="JS_classes\GetFriendsLocalizationJS.cs" />
+    <Compile Include="JS_classes\GiveLocalizationJS.cs" />
     <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="JS_classes\LogJS.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,7 @@
     <Compile Include="RegisterScreen.xaml.cs">
       <DependentUpon>RegisterScreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="JS_classes\RegJS.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -208,6 +212,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

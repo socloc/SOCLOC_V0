@@ -15,38 +15,45 @@ namespace SocLoc_project_WP
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        static string userName;
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-
+            DatabaseHandler.WhenDownloaded += DatabaseHandler_WhenDownloaded;
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
 
+        private void DatabaseHandler_WhenDownloaded()
+        {
+            if (DatabaseHandler.authentification)
+            {
+                //UserScreen usrScreen = new UserScreen(userName);
+                //UserScreen usrScreen = new UserScreen();
+                //DataContext = usrScreen;
+                //Uri logPageUri = new Uri("/UserScreen.xaml", UriKind.Relative);
+                //Frame.Navigate(typeof(UserScreen));
+                NavigationService.Navigate(new Uri("/UserScreen.xaml?par=" + userName, UriKind.Relative));
+            }
+            else
+            {
+                infoTextBlock.Foreground = new SolidColorBrush(Colors.Red);
+                infoTextBlock.Text = "Wrong user name or password !";
+            }
+        }
+
         private void logInButton_Click(object sender, RoutedEventArgs e)
         {
-            string userName = loginTextBox.Text;
+            userName = loginTextBox.Text;
             string password = passwdTextBox.Password.ToString();
 
             if (userName != "1" && password != "1")
             {
                 if (userName != null && password != null)
                 {
-                    if (DatabaseHandler.LogIn(userName, password))
-                    {
-                        //UserScreen usrScreen = new UserScreen(userName);
-                        UserScreen usrScreen = new UserScreen();
-                        DataContext = usrScreen;
-                        //Uri logPageUri = new Uri("/UserScreen.xaml", UriKind.Relative);
-                        //Frame.Navigate(typeof(UserScreen));
-                        NavigationService.Navigate(new Uri("/UserScreen.xaml", UriKind.Relative));
-                    }
-                    else
-                    {
-                        infoTextBlock.Foreground = new SolidColorBrush(Colors.Red);
-                        infoTextBlock.Text = "Wrong user name or password !";
-                    }
+                    //WaitForAuthentification(userName, password);
+                    DatabaseHandler.LogIn(userName, password);
                 }
                 else
                     infoTextBlock.Text = "Insert user name and/or password";
@@ -63,6 +70,11 @@ namespace SocLoc_project_WP
             //cln.GetDataCompleted += Cln_GetDataCompleted;
             //cln.GetDataAsync(userName, password);
         }
+
+        //private async void WaitForAuthentification(string userName, string password)
+        //{
+        //    await 
+        //}
 
         private void registerTextBlock_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
