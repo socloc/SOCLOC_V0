@@ -94,7 +94,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseHandler.cs" />
+    <Compile Include="Database\DatabaseHandler.cs" />
     <Compile Include="JS_classes\GetFriendsLocalizationJS.cs" />
     <Compile Include="JS_classes\GiveLocalizationJS.cs" />
     <Compile Include="LocalizedStrings.cs" />
@@ -117,7 +117,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="UserLogger.cs" />
+    <Compile Include="Database\UserLogger.cs" />
     <Compile Include="UserScreen.xaml.cs">
       <DependentUpon>UserScreen.xaml</DependentUpon>
     </Compile>
