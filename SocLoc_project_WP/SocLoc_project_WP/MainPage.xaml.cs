@@ -20,12 +20,12 @@ namespace SocLoc_project_WP
         public MainPage()
         {
             InitializeComponent();
-            DatabaseHandler.WhenDownloaded += DatabaseHandler_WhenDownloaded;
+            DatabaseHandler.WhenDownloaded_whenLog += DatabaseHandler_WhenDownloaded_whenLog;
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
 
-        private void DatabaseHandler_WhenDownloaded()
+        private void DatabaseHandler_WhenDownloaded_whenLog()
         {
             if (DatabaseHandler.authentification)
             {
@@ -34,12 +34,12 @@ namespace SocLoc_project_WP
                 //DataContext = usrScreen;
                 //Uri logPageUri = new Uri("/UserScreen.xaml", UriKind.Relative);
                 //Frame.Navigate(typeof(UserScreen));
-                NavigationService.Navigate(new Uri("/UserScreen.xaml?par=" + userName, UriKind.Relative));
+                Deployment.Current.Dispatcher.BeginInvoke(new Action(() => NavigationService.Navigate(new Uri("/UserScreen.xaml?par=" + userName +"_" + DatabaseHandler.userId, UriKind.Relative))));
             }
             else
             {
-                infoTextBlock.Foreground = new SolidColorBrush(Colors.Red);
-                infoTextBlock.Text = "Wrong user name or password !";
+                Deployment.Current.Dispatcher.BeginInvoke(new Action(() => infoTextBlock.Foreground = new SolidColorBrush(Colors.Red)));
+                Deployment.Current.Dispatcher.BeginInvoke(new Action(() => infoTextBlock.Text = "Wrong user name or password !"));
             }
         }
 
@@ -64,7 +64,7 @@ namespace SocLoc_project_WP
                 //UserScreen usrScreen = new UserScreen();
                 //DataContext = usrScreen;
                 //NavigationService.Navigate(new Uri("/UserScreen.xaml", UriKind.Relative));
-                NavigationService.Navigate(new Uri("/UserScreen.xaml?par=" + userName, UriKind.Relative));
+                NavigationService.Navigate(new Uri("/UserScreen.xaml?par=" + '1' + "_" + '1', UriKind.Relative));
             }
             //ServiceReference1.Service1Client cln = new ServiceReference1.Service1Client();
             //cln.GetDataCompleted += Cln_GetDataCompleted;

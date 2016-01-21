@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Windows.Media;
 
 namespace SocLoc_project_WP
 {
@@ -15,39 +16,46 @@ namespace SocLoc_project_WP
         public RegisterScreen()
         {
             InitializeComponent();
+            DatabaseHandler.WhenDownloaded_whenReg += DatabaseHandler_WhenDownloaded_whenReg;
+        }
+
+        private void DatabaseHandler_WhenDownloaded_whenReg()
+        {
+            if (DatabaseHandler.isRegisterSuccess)
+            {
+                //Application.Current.Dispatcher
+                Deployment.Current.Dispatcher.BeginInvoke(new Action(() => infoTextBlock.Text = "Register was succesfull, please confirm your registration !"));
+                Deployment.Current.Dispatcher.BeginInvoke(new Action(() => goToMainPageTextBlock.Visibility= Visibility.Visible));
+            }
+            else
+            {
+                Deployment.Current.Dispatcher.BeginInvoke(new Action(() => infoTextBlock.Foreground = new SolidColorBrush(Colors.Red)));
+                Deployment.Current.Dispatcher.BeginInvoke(new Action(() => infoTextBlock.Text = "Unsuccesfull registration ! Please check your personal data !"));
+            }
         }
 
         private void regInButton_Click(object sender, RoutedEventArgs e)
         {
-            string userName = regLoginTextBox.Text;
+            string name = regNameTextBox.Text;
             string password = regPasswdTextBox.Password.ToString();
-            if (userName != "1" && password != "1")
+            string surname = regSurnameTextBox.Text;
+            string city = regCityTextBox.Text;
+            string phone = regPhoneTextBox.Text;
+            string email = regEmailTextBox.Text;
+            if (name != null && password != null && surname != null && surname != null && city != null && phone != null && email != null)
             {
-                if (userName != null && password != null)
-                {
-                    if (DatabaseHandler.RegisterIn(userName, password))
-                    {
-                        //UserScreen usrScreen = new UserScreen(userName);
-                        //DataContext = usrScreen;
-                        NavigationService.Navigate(new Uri("UserScreen.xaml", UriKind.Relative));
-                    }
-                    else
-                    {
-                        infoTextBlock.Text = "Wrong user name or password !";
-                    }
-                }
-                else
-                    infoTextBlock.Text = "Insert user name and/or password";
+                DatabaseHandler.RegisterIn(name, surname, city, phone, email, password);
             }
             else
             {
-                //UserScreen usrScreen = new UserScreen(userName);
-                //DataContext = usrScreen;
-                //NavigationService.Navigate(new Uri("/UserScreen.xaml", UriKind.Relative));
-                NavigationService.Navigate(new Uri("/UserScreen.xaml?par=" + userName, UriKind.Relative));
+                infoTextBlock.Foreground = new SolidColorBrush(Colors.Red);
+                infoTextBlock.Text = "Probably you left empty one or more of the textbox";
             }
-
         }
 
+        private void goToMainPageTextBlock_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+        }
     }
 }

@@ -21,7 +21,9 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0, 20, 0, 0" FontSize="26" FontStyle="Normal" Text="Hello !" />
         <TextBlock Name="userNameTextBlock" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="90, 20, 0, 0" FontSize="26" FontStyle="Italic" Text="{Binding UserName}" />
-        
+        <TextBlock Name="errorTextBlock" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 60, 0, 0" FontSize="18" Foreground="Red" Text="" />
+        <Button Name="cancel_Interval" Grid.Row="2" Width="300" Height="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="59,10,121,0" Content="Cancel GeoLocation" Click="Cancel_Interval_Click" />
+        <Button Name="goToMap_button" Grid.Row="2" Width="300" Height="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="59,70,121,0" Content="Go to the Map" Click="goToMap_button_Click" />
     </Grid>
     <!--LayoutRoot is the root grid where all page content is placed-->
 

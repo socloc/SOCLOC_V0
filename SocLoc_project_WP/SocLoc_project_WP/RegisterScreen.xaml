@@ -15,15 +15,23 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid Margin="10,0,-10,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="650"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="217,24,213,0" FontSize="20" Text="Login" />
-        <TextBox Name="regLoginTextBox" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="166,51,138,0" Width="176" />
-
-        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Text="Password" Margin="218,133,179,193" />
-        <PasswordBox Name="regPasswdTextBox" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="176" Margin="166,155,138,126"  />
-        <Button Name="regInButton" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="98,234,70,49" Width="312" Height="70" Content="Register user" Click="regInButton_Click"  />
-        <TextBlock Name="infoTextBlock" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Foreground="Red"/>
+        <TextBlock Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="217,10,210,0" FontSize="20" Text="Name" />
+        <TextBox Name="regNameTextBox" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="102,37,74,0" Width="304" />
+        <TextBlock Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="217,114,184,0" FontSize="20" Text="Surname" />
+        <TextBox Name="regSurnameTextBox" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="102,136,74,0" Width="304" />
+        <TextBlock Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="217,208,229,0" FontSize="20" Text="City" />
+        <TextBox Name="regCityTextBox" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="102,240,74,0" Width="304" />
+        <TextBlock Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="217,312,206,0" FontSize="20" Text="Phone" RenderTransformOrigin="0.536,0.556" />
+        <TextBox Name="regPhoneTextBox" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="102,339,74,0" Width="304" />
+        <TextBlock Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="218,411,214,0" FontSize="20" Text="Email" RenderTransformOrigin="0.536,0.556" />
+        <TextBox Name="regEmailTextBox" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="102,438,74,0" Width="304" />
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Text="Password" Margin="217,515,180,108" />
+        <PasswordBox Name="regPasswdTextBox" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="304" Margin="102,547,74,31"  />
+        <Button Name="regInButton" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="102,638,66,60" Width="312" Height="70" Content="Register user" Click="regInButton_Click" Grid.RowSpan="2"  />
+        <TextBlock Name="infoTextBlock" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" FontSize="12" Margin="112,58,-155,0" Width="523"/>
+        <TextBlock Name="goToMainPageTextBlock" Visibility="Collapsed" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Text="Go to Login Screen !" FontSize="14" Margin="193,83,-236,0" Width="523" MouseLeftButtonDown="goToMainPageTextBlock_MouseLeftButtonDown"/>
     </Grid>
 </phone:PhoneApplicationPage>

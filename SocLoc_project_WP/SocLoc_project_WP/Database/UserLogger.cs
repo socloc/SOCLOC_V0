@@ -11,10 +11,12 @@ namespace SocLoc_project_WP
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private string usrnm;
+        private int userId;
 
-        public UserLogger(string usrnm_C)
+        public UserLogger(string usrnm_C, int usr_id)
         {
             usrnm = usrnm_C;
+            userId = usr_id;
         }
         protected void RaisePropertyChanged(string propertyName)
         {
