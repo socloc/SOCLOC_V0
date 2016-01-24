@@ -12,7 +12,7 @@ namespace SocLoc_project_WP
 {
     class IntervalGetter
     {
-        public Geoposition lastGeoposition;
+        
         public enum typeOfGetter {getPosition=1};
         bool shouldThreadWork = true;
         int interval = 0;
@@ -21,15 +21,12 @@ namespace SocLoc_project_WP
 
         public IntervalGetter(int interv, typeOfGetter tp )
         {
-            GeoLocation.AfterGetLocationEvent += GeoLocation_AfterGetLocationEvent;
+            
             interval = interv;
             type = tp;
         }
 
-        private void GeoLocation_AfterGetLocationEvent()
-        {
-            lastGeoposition = GeoLocation.Instance.geoposition;
-        }
+
 
         public async Task getPositionAsync()
         {
@@ -40,8 +37,9 @@ namespace SocLoc_project_WP
                     case typeOfGetter.getPosition:
                         do
                         {
-                            await Task.Delay(5000, tokenSource.Token);
+                            await Task.Delay(interval * 1000, tokenSource.Token);
                             GeoLocation.Instance.getOwnLocation();
+
                         } while (!tokenSource.IsCancellationRequested);
                     break;
                 }

@@ -32,10 +32,10 @@ namespace SocLoc_project_WP
 
             try
             {
-                    geoposition = await geolocator.GetGeopositionAsync(
-                    maximumAge: TimeSpan.FromMinutes(5),
-                    timeout: TimeSpan.FromSeconds(10)
-                    );
+                geoposition = await geolocator.GetGeopositionAsync(
+                maximumAge: TimeSpan.FromMinutes(5),
+                timeout: TimeSpan.FromSeconds(10)
+                );
                 AfterGetLocationEvent();
             }
             catch (Exception ex)

@@ -27,7 +27,7 @@ namespace SocLoc_project_WP
         {
             //bingMapsTask.SearchTerm = "coffee";
             bingMapsTask.Center = new GeoCoordinate(latitude, longitude);
-            bingMapsTask.ZoomLevel = 4;
+            bingMapsTask.ZoomLevel = 64;
             bingMapsTask.Show();
         }
 

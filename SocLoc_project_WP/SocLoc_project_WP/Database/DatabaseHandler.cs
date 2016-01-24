@@ -6,18 +6,25 @@ using System.Linq;
 using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace SocLoc_project_WP
 {
     delegate void IndicatorToDownload();
+    delegate void IndicatorForFriendsLoc(List<Friend> friendsList);
+    delegate void IndicatorGetName(int userID, string name);
     static class DatabaseHandler
     {
         public static Boolean authentification = false;
         public static int userId;
         public static Boolean isRegisterSuccess = false;
+        public static Boolean isThereFriendsLoc = false;
         public static event IndicatorToDownload WhenDownloaded_whenReg;
         public static event IndicatorToDownload WhenDownloaded_whenLog;
+        public static event IndicatorToDownload WhenNoFriends;
+        public static event IndicatorForFriendsLoc WhenFriendsLoc;
+        public static event IndicatorGetName WhenGetName;
 
         public static void LogIn(string userName, string password)
         {
@@ -201,28 +208,147 @@ namespace SocLoc_project_WP
             }
         }
 
-        //static private void authUser_OpenReadCompletedEventArgs(object sender, OpenReadCompletedEventArgs e)
-        //{
-        //    List<string> lines = new List<string>();
-        //    try
-        //    {
-        //        using (StreamReader streamReader = new StreamReader(e.Result))
-        //        {
-        //            while (!streamReader.EndOfStream)
-        //            {
-        //                lines.Add(streamReader.ReadLine());
-        //            }
-        //            //DataContractJsonSerializer jsSerializer = new DataContractJsonSerializer(typeof(LogJS[]));
-        //            //var users = (LogJS[])jsSerializer.ReadObject(streamReader);
-        //            //var user = users[0];
-        //        }
-        //        if(lines[0] == "1")
-        //            authentification = true;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        authentification = false;
-        //    }
-        //}
+        internal static void GiveLocation(int userID, double latitude, double longitude)
+        {
+            HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/location/add?user_id=" + userID.ToString() + "&latitude=" + latitude.ToString() + "&longitude=" + longitude.ToString(), UriKind.Absolute));
+            IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(runGiveLocationEvent), httpRequest);
+        }
+
+        private static void runGiveLocationEvent(IAsyncResult result)
+        {
+            try
+            {
+                HttpWebRequest httpRequest = (HttpWebRequest)result.AsyncState;
+                WebResponse webResponse = httpRequest.EndGetResponse(result);
+                //Stream stream = webResponse.GetResponseStream();
+                //StreamReader streamReader = new StreamReader(stream);
+                //streamReader.Dispose();
+                //stream.Dispose();
+                webResponse.Dispose();
+            }
+            catch (WebException ex)
+            {
+
+            }
+        }
+
+        internal static void GetYourFriendsLocation(int userID)
+        {
+            HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/location/getFriends/" + userID.ToString(), UriKind.Absolute));
+            IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(getFriendsLocEvent), httpRequest);
+
+        }
+
+        private static void getFriendsLocEvent(IAsyncResult result)
+        {
+            List<string> lines = new List<string>();
+            try
+            {
+                HttpWebRequest httpRequest = (HttpWebRequest)result.AsyncState;
+                WebResponse webResponse = httpRequest.EndGetResponse(result);
+
+                Stream stream = webResponse.GetResponseStream();
+                StreamReader streamReader = new StreamReader(stream);
+                string text = streamReader.ReadToEnd();
+                //lines.Add(streamReader.ReadLine());
+                //lines.Add(streamReader.ReadLine());
+                //lines.Add(streamReader.ReadLine());
+
+                if (text == "Brak ostatnich lokalizacji znajomych.")
+                {
+                    isThereFriendsLoc = false;
+                    WhenNoFriends();
+                }
+                else
+                {
+                    List<Friend> friendsList = new List<Friend>();
+                    string[] words = text.Split('{');
+                    const string patternForClassify = @".*user_id"":(.*),""latitude"":""(.*)"",""longitude"":""(.*)"",""created_at.*";
+                    Regex rExtractToClassify = new Regex(patternForClassify, RegexOptions.IgnoreCase);
+                    Match mExtract;
+                    Group g0;
+                    Group g1;
+                    Group g2;
+                    Group g3;
+                    for (int i = 1; i < words.Length; i++)
+                    {
+                        mExtract = rExtractToClassify.Match(words[i]);
+                        g1 = mExtract.Groups[1];
+                        g2 = mExtract.Groups[2];
+                        g3 = mExtract.Groups[3];
+                        int usrID = Int16.Parse(g1.ToString());
+                        Double usrLat = Double.Parse(g2.ToString());
+                        Double usrLong = Double.Parse(g3.ToString());
+                        Friend friend = new Friend(usrID, usrLong, usrLat);
+                        friendsList.Add(friend);
+                    }
+                    WhenFriendsLoc(friendsList);
+                    //isThereFriendsLoc = false;
+
+                    //foreach(string line in lines)
+                    //{
+
+
+                    //}
+                    //WhenFriendsLoc();
+                }
+                streamReader.Dispose();
+            }
+            catch (WebException ex)
+            {
+                isRegisterSuccess = false;
+                WhenDownloaded_whenReg();
+            }
+        }
+
+        internal static void GetFriendName(int userID)
+        {
+            HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/user/getData/" + userID.ToString(), UriKind.Absolute));
+            IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(getFriendsNameEvent), httpRequest);
+
+        }
+
+        private static void getFriendsNameEvent(IAsyncResult result)
+        {
+            List<string> lines = new List<string>();
+            try
+            {
+                HttpWebRequest httpRequest = (HttpWebRequest)result.AsyncState;
+                WebResponse webResponse = httpRequest.EndGetResponse(result);
+
+                Stream stream = webResponse.GetResponseStream();
+                StreamReader streamReader = new StreamReader(stream);
+                string text = streamReader.ReadToEnd();
+
+                if (text == "Nie znaleziono takiego użytkownika.")
+                {
+                }
+                else
+                {
+                    const string patternForClassify = @".*id"":(.*),""name"":""(.*)"",""surname"":""(.*)"",""date.*";
+                    Regex rExtractToClassify = new Regex(patternForClassify, RegexOptions.IgnoreCase);
+                    Match mExtract;
+                    Group g0;
+                    Group g1;
+                    Group g2;
+                    Group g3;
+                    mExtract = rExtractToClassify.Match(text);
+                    g1 = mExtract.Groups[1];
+                    g2 = mExtract.Groups[2];
+                    g3 = mExtract.Groups[3];
+                    int userId = Int16.Parse(g1.ToString());
+                    string returnedName = g2.ToString() + ' ' + g3.ToString();
+                    WhenGetName(userId, returnedName);
+                }
+                streamReader.Dispose();
+            }
+            catch (WebException ex)
+            {
+                isRegisterSuccess = false;
+                WhenDownloaded_whenReg();
+            }
+        }
+
+        
     }
-}
+    }
