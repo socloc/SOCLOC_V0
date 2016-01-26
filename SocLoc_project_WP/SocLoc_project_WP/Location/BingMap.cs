@@ -9,17 +9,17 @@ using Windows.Devices.Geolocation;
 
 namespace SocLoc_project_WP
 {
-    class Map
+    class BingMap
     {
         BingMapsTask bingMapsTask = new BingMapsTask();
-        private static Map single_oInstance = null;
+        private static BingMap single_oInstance = null;
 
-        public static Map Instance
+        public static BingMap Instance
         {
             get
             {
                 if (single_oInstance == null)
-                    single_oInstance = new Map();
+                    single_oInstance = new BingMap();
                 return single_oInstance;
             }
         }
@@ -27,7 +27,7 @@ namespace SocLoc_project_WP
         {
             //bingMapsTask.SearchTerm = "coffee";
             bingMapsTask.Center = new GeoCoordinate(latitude, longitude);
-            bingMapsTask.ZoomLevel = 64;
+            bingMapsTask.ZoomLevel = 24;
             bingMapsTask.Show();
         }
 

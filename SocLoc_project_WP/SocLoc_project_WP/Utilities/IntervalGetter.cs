@@ -39,7 +39,6 @@ namespace SocLoc_project_WP
                         {
                             await Task.Delay(interval * 1000, tokenSource.Token);
                             GeoLocation.Instance.getOwnLocation();
-
                         } while (!tokenSource.IsCancellationRequested);
                     break;
                 }
