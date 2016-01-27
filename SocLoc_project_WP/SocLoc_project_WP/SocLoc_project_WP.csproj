@@ -96,6 +96,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="chat.xaml.cs">
+      <DependentUpon>chat.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Database\DatabaseHandler.cs" />
     <Compile Include="Location\OtherUsers.cs" />
     <Compile Include="Location\GeoLocation.cs" />
@@ -129,6 +132,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="chat.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

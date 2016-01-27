@@ -1,0 +1,1035 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Apis.Coordinate.v1</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Apis.Coordinate.v1.Data.CustomField">
+            <summary>Custom field.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomField.CustomFieldId">
+            <summary>Custom field id.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomField.Kind">
+            <summary>Identifies this object as a custom field.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomField.Value">
+            <summary>Custom field value.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomField.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.CustomFieldDef">
+            <summary>Custom field definition.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFieldDef.Enabled">
+            <summary>Whether the field is enabled.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFieldDef.Enumitems">
+            <summary>List of enum items for this custom field. Populated only if the field type is enum. Enum fields
+            appear as 'lists' in the Coordinate web and mobile UI.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFieldDef.Id">
+            <summary>Custom field id.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFieldDef.Kind">
+            <summary>Identifies this object as a custom field definition.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFieldDef.Name">
+            <summary>Custom field name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFieldDef.RequiredForCheckout">
+            <summary>Whether the field is required for checkout.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFieldDef.Type">
+            <summary>Custom field type.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFieldDef.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.CustomFieldDefListResponse">
+            <summary>Collection of custom field definitions for a team.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFieldDefListResponse.Items">
+            <summary>Collection of custom field definitions in a team.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFieldDefListResponse.Kind">
+            <summary>Identifies this object as a collection of custom field definitions in a team.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFieldDefListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.CustomFields">
+            <summary>Collection of custom fields.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFields.CustomField">
+            <summary>Collection of custom fields.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFields.Kind">
+            <summary>Identifies this object as a collection of custom fields.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.CustomFields.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.EnumItemDef">
+            <summary>Enum Item definition.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.EnumItemDef.Active">
+            <summary>Whether the enum item is active. Jobs may contain inactive enum values; however, setting an enum to
+            an inactive value when creating or updating a job will result in a 500 error.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.EnumItemDef.Kind">
+            <summary>Identifies this object as an enum item definition.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.EnumItemDef.Value">
+            <summary>Custom field value.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.EnumItemDef.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.Job">
+            <summary>A job.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Job.Id">
+            <summary>Job id.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Job.JobChange">
+            <summary>List of job changes since it was created. The first change corresponds to the state of the job when
+            it was created.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Job.Kind">
+            <summary>Identifies this object as a job.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Job.State">
+            <summary>Current job state.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Job.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.JobChange">
+            <summary>Change to a job. For example assigning the job to a different worker.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobChange.Kind">
+            <summary>Identifies this object as a job change.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobChange.State">
+            <summary>Change applied to the job. Only the fields that were changed are set.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobChange.Timestamp">
+            <summary>Time at which this change was applied.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobChange.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.JobListResponse">
+            <summary>Response from a List Jobs request.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobListResponse.Items">
+            <summary>Jobs in the collection.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobListResponse.Kind">
+            <summary>Identifies this object as a list of jobs.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobListResponse.NextPageToken">
+            <summary>A token to provide to get the next page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.JobState">
+            <summary>Current state of a job.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobState.Assignee">
+            <summary>Email address of the assignee, or the string "DELETED_USER" if the account is no longer
+            available.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobState.CustomFields">
+            <summary>Custom fields.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobState.CustomerName">
+            <summary>Customer name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobState.CustomerPhoneNumber">
+            <summary>Customer phone number.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobState.Kind">
+            <summary>Identifies this object as a job state.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobState.Location">
+            <summary>Job location.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobState.Note">
+            <summary>Note added to the job.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobState.Progress">
+            <summary>Job progress.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobState.Title">
+            <summary>Job title.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.JobState.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.Location">
+            <summary>Location of a job.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Location.AddressLine">
+            <summary>Address.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Location.Kind">
+            <summary>Identifies this object as a location.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Location.Lat">
+            <summary>Latitude.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Location.Lng">
+            <summary>Longitude.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Location.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.LocationListResponse">
+            <summary>Response from a List Locations request.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.LocationListResponse.Items">
+            <summary>Locations in the collection.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.LocationListResponse.Kind">
+            <summary>Identifies this object as a list of locations.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.LocationListResponse.NextPageToken">
+            <summary>A token to provide to get the next page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.LocationListResponse.TokenPagination">
+            <summary>Pagination information for token pagination.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.LocationListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.LocationRecord">
+            <summary>Recorded location of a worker.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.LocationRecord.CollectionTime">
+            <summary>The collection time in milliseconds since the epoch.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.LocationRecord.ConfidenceRadius">
+            <summary>The location accuracy in meters. This is the radius of a 95% confidence interval around the
+            location measurement.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.LocationRecord.Kind">
+            <summary>Identifies this object as a location.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.LocationRecord.Latitude">
+            <summary>Latitude.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.LocationRecord.Longitude">
+            <summary>Longitude.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.LocationRecord.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.Schedule">
+            <summary>Job schedule.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Schedule.AllDay">
+            <summary>Whether the job is scheduled for the whole day. Time of day in start/end times is ignored if this
+            is true.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Schedule.Duration">
+            <summary>Job duration in milliseconds.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Schedule.EndTime">
+            <summary>Scheduled end time in milliseconds since epoch.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Schedule.Kind">
+            <summary>Identifies this object as a job schedule.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Schedule.StartTime">
+            <summary>Scheduled start time in milliseconds since epoch.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Schedule.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.Team">
+            <summary>A Coordinate team.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Team.Id">
+            <summary>Team id, as found in a coordinate team url e.g. https://coordinate.google.com/f/xyz where "xyz" is
+            the team id.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Team.Kind">
+            <summary>Identifies this object as a team.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Team.Name">
+            <summary>Team name</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Team.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.TeamListResponse">
+            <summary>Response from a List Teams request.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.TeamListResponse.Items">
+            <summary>Teams in the collection.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.TeamListResponse.Kind">
+            <summary>Identifies this object as a list of teams.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.TeamListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.TokenPagination">
+            <summary>Pagination information.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.TokenPagination.Kind">
+            <summary>Identifies this object as pagination information.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.TokenPagination.NextPageToken">
+            <summary>A token to provide to get the next page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.TokenPagination.PreviousPageToken">
+            <summary>A token to provide to get the previous page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.TokenPagination.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.Worker">
+            <summary>A worker in a Coordinate team.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Worker.Id">
+            <summary>Worker email address. If a worker has been deleted from your team, the email address will appear as
+            DELETED_USER.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Worker.Kind">
+            <summary>Identifies this object as a worker.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.Worker.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.Data.WorkerListResponse">
+            <summary>Response from a List Workers request.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.WorkerListResponse.Items">
+            <summary>Workers in the collection.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.WorkerListResponse.Kind">
+            <summary>Identifies this object as a list of workers.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.Data.WorkerListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.CoordinateService">
+            <summary>The Coordinate Service.</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.CoordinateService.Version">
+            <summary>The API version.</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.CoordinateService.DiscoveryVersionUsed">
+            <summary>The discovery version used to generate this service.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.CoordinateService.#ctor">
+            <summary>Constructs a new service.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.CoordinateService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">
+            <summary>Constructs a new service.</summary>
+            <param name="initializer">The service initializer.</param>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateService.Features">
+            <summary>Gets the service supported features.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateService.Name">
+            <summary>Gets the service name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateService.BaseUri">
+            <summary>Gets the service base URI.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateService.BasePath">
+            <summary>Gets the service base path.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateService.CustomFieldDef">
+            <summary>Gets the CustomFieldDef resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateService.Jobs">
+            <summary>Gets the Jobs resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateService.Location">
+            <summary>Gets the Location resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateService.Schedule">
+            <summary>Gets the Schedule resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateService.Team">
+            <summary>Gets the Team resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateService.Worker">
+            <summary>Gets the Worker resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.CoordinateService.Scope">
+            <summary>Available OAuth 2.0 scopes for use with the Google Maps Coordinate API.</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.CoordinateService.Scope.Coordinate">
+            <summary>View and manage your Google Maps Coordinate jobs</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.CoordinateService.Scope.CoordinateReadonly">
+            <summary>View your Google Coordinate jobs</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1">
+            <summary>A base abstract class for Coordinate requests.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new CoordinateBaseServiceRequest instance.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1.InitParameters">
+            <summary>Initializes Coordinate parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1.Alt">
+            <summary>Data format for the response.</summary>
+            [default: json]
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and reports.
+            Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary string
+            assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1.UserIp">
+            <summary>IP address of the site where the request originates. Use this if you want to enforce per-user
+            limits.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.CoordinateBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.CustomFieldDefResource">
+            <summary>The "customFieldDef" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.CustomFieldDefResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.CustomFieldDefResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.CustomFieldDefResource.List(System.String)">
+            <summary>Retrieves a list of custom field definitions for a team.</summary>
+            <param name="teamId">Team ID</param>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.CustomFieldDefResource.ListRequest">
+            <summary>Retrieves a list of custom field definitions for a team.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.CustomFieldDefResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.CustomFieldDefResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CustomFieldDefResource.ListRequest.TeamId">
+            <summary>Team ID</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CustomFieldDefResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CustomFieldDefResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.CustomFieldDefResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.JobsResource">
+            <summary>The "jobs" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.JobsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.Get(System.String,System.UInt64)">
+            <summary>Retrieves a job, including all the changes made to the job.</summary>
+            <param name="teamId">Team ID</param>
+            <param name="jobId">Job number</param>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.Insert(Google.Apis.Coordinate.v1.Data.Job,System.String,System.String,System.Double,System.Double,System.String)">
+            <summary>Inserts a new job. Only the state field of the job should be set.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="teamId">Team ID</param>
+            <param name="address">Job address as newline (Unix) separated
+            string</param>
+            <param name="lat">The latitude coordinate of this job's location.</param>
+            <param
+            name="lng">The longitude coordinate of this job's location.</param>
+            <param name="title">Job
+            title</param>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.List(System.String)">
+            <summary>Retrieves jobs created or modified since the given timestamp.</summary>
+            <param name="teamId">Team ID</param>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.Patch(Google.Apis.Coordinate.v1.Data.Job,System.String,System.UInt64)">
+            <summary>Updates a job. Fields that are set in the job state will be updated. This method supports patch
+            semantics.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="teamId">Team ID</param>
+            <param name="jobId">Job number</param>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.Update(Google.Apis.Coordinate.v1.Data.Job,System.String,System.UInt64)">
+            <summary>Updates a job. Fields that are set in the job state will be updated.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="teamId">Team ID</param>
+            <param name="jobId">Job number</param>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.JobsResource.GetRequest">
+            <summary>Retrieves a job, including all the changes made to the job.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.UInt64)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.GetRequest.TeamId">
+            <summary>Team ID</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.GetRequest.JobId">
+            <summary>Job number</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.JobsResource.InsertRequest">
+            <summary>Inserts a new job. Only the state field of the job should be set.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Coordinate.v1.Data.Job,System.String,System.String,System.Double,System.Double,System.String)">
+            <summary>Constructs a new Insert request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.TeamId">
+            <summary>Team ID</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.Address">
+            <summary>Job address as newline (Unix) separated string</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.Lat">
+            <summary>The latitude coordinate of this job's location.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.Lng">
+            <summary>The longitude coordinate of this job's location.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.Title">
+            <summary>Job title</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.CustomerName">
+            <summary>Customer name</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.Note">
+            <summary>Job note as newline (Unix) separated string</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.Assignee">
+            <summary>Assignee email address, or empty string to unassign.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.CustomerPhoneNumber">
+            <summary>Customer phone number</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.CustomField">
+            <summary>Sets the value of custom fields. To set a custom field, pass the field id (from
+            /team/teamId/custom_fields), a URL escaped '=' character, and the desired value as a parameter. For
+            example, customField=12%3DAlice. Repeat the parameter for each custom field. Note that '=' cannot appear
+            in the parameter value. Specifying an invalid, or inactive enum field will result in an error
+            500.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.InsertRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.JobsResource.ListRequest">
+            <summary>Retrieves jobs created or modified since the given timestamp.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.ListRequest.TeamId">
+            <summary>Team ID</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.ListRequest.MinModifiedTimestampMs">
+            <summary>Minimum time a job was modified in milliseconds since epoch.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.ListRequest.PageToken">
+            <summary>Continuation token</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.ListRequest.MaxResults">
+            <summary>Maximum number of results to return in one page.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.ListRequest.OmitJobChanges">
+            <summary>Whether to omit detail job history information.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.JobsResource.PatchRequest">
+            <summary>Updates a job. Fields that are set in the job state will be updated. This method supports patch
+            semantics.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Coordinate.v1.Data.Job,System.String,System.UInt64)">
+            <summary>Constructs a new Patch request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.TeamId">
+            <summary>Team ID</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.JobId">
+            <summary>Job number</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.CustomerName">
+            <summary>Customer name</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.Title">
+            <summary>Job title</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.Note">
+            <summary>Job note as newline (Unix) separated string</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.Assignee">
+            <summary>Assignee email address, or empty string to unassign.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.CustomerPhoneNumber">
+            <summary>Customer phone number</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.Address">
+            <summary>Job address as newline (Unix) separated string</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.Lat">
+            <summary>The latitude coordinate of this job's location.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.Progress">
+            <summary>Job progress</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.Lng">
+            <summary>The longitude coordinate of this job's location.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.CustomField">
+            <summary>Sets the value of custom fields. To set a custom field, pass the field id (from
+            /team/teamId/custom_fields), a URL escaped '=' character, and the desired value as a parameter. For
+            example, customField=12%3DAlice. Repeat the parameter for each custom field. Note that '=' cannot appear
+            in the parameter value. Specifying an invalid, or inactive enum field will result in an error
+            500.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.ProgressEnum">
+            <summary>Job progress</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.ProgressEnum.COMPLETED">
+            <summary>Completed</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.ProgressEnum.INPROGRESS">
+            <summary>In progress</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.ProgressEnum.NOTACCEPTED">
+            <summary>Not accepted</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.ProgressEnum.NOTSTARTED">
+            <summary>Not started</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.JobsResource.PatchRequest.ProgressEnum.OBSOLETE">
+            <summary>Obsolete</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest">
+            <summary>Updates a job. Fields that are set in the job state will be updated.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Coordinate.v1.Data.Job,System.String,System.UInt64)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.TeamId">
+            <summary>Team ID</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.JobId">
+            <summary>Job number</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.CustomerName">
+            <summary>Customer name</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.Title">
+            <summary>Job title</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.Note">
+            <summary>Job note as newline (Unix) separated string</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.Assignee">
+            <summary>Assignee email address, or empty string to unassign.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.CustomerPhoneNumber">
+            <summary>Customer phone number</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.Address">
+            <summary>Job address as newline (Unix) separated string</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.Lat">
+            <summary>The latitude coordinate of this job's location.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.Progress">
+            <summary>Job progress</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.Lng">
+            <summary>The longitude coordinate of this job's location.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.CustomField">
+            <summary>Sets the value of custom fields. To set a custom field, pass the field id (from
+            /team/teamId/custom_fields), a URL escaped '=' character, and the desired value as a parameter. For
+            example, customField=12%3DAlice. Repeat the parameter for each custom field. Note that '=' cannot appear
+            in the parameter value. Specifying an invalid, or inactive enum field will result in an error
+            500.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.ProgressEnum">
+            <summary>Job progress</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.ProgressEnum.COMPLETED">
+            <summary>Completed</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.ProgressEnum.INPROGRESS">
+            <summary>In progress</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.ProgressEnum.NOTACCEPTED">
+            <summary>Not accepted</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.ProgressEnum.NOTSTARTED">
+            <summary>Not started</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.JobsResource.UpdateRequest.ProgressEnum.OBSOLETE">
+            <summary>Obsolete</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.LocationResource">
+            <summary>The "location" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.LocationResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.LocationResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.LocationResource.List(System.String,System.String,System.UInt64)">
+            <summary>Retrieves a list of locations for a worker.</summary>
+            <param name="teamId">Team ID</param>
+            <param name="workerEmail">Worker email address.</param>
+            <param
+            name="startTimestampMs">Start timestamp in milliseconds since the epoch.</param>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.LocationResource.ListRequest">
+            <summary>Retrieves a list of locations for a worker.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.LocationResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.UInt64)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.LocationResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.LocationResource.ListRequest.TeamId">
+            <summary>Team ID</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.LocationResource.ListRequest.WorkerEmail">
+            <summary>Worker email address.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.LocationResource.ListRequest.StartTimestampMs">
+            <summary>Start timestamp in milliseconds since the epoch.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.LocationResource.ListRequest.PageToken">
+            <summary>Continuation token</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.LocationResource.ListRequest.MaxResults">
+            <summary>Maximum number of results to return in one page.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.LocationResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.LocationResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.LocationResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.ScheduleResource">
+            <summary>The "schedule" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.ScheduleResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.Get(System.String,System.UInt64)">
+            <summary>Retrieves the schedule for a job.</summary>
+            <param name="teamId">Team ID</param>
+            <param name="jobId">Job number</param>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.Patch(Google.Apis.Coordinate.v1.Data.Schedule,System.String,System.UInt64)">
+            <summary>Replaces the schedule of a job with the provided schedule. This method supports patch
+            semantics.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="teamId">Team ID</param>
+            <param name="jobId">Job number</param>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.Update(Google.Apis.Coordinate.v1.Data.Schedule,System.String,System.UInt64)">
+            <summary>Replaces the schedule of a job with the provided schedule.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="teamId">Team ID</param>
+            <param name="jobId">Job number</param>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.ScheduleResource.GetRequest">
+            <summary>Retrieves the schedule for a job.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.UInt64)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.GetRequest.TeamId">
+            <summary>Team ID</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.GetRequest.JobId">
+            <summary>Job number</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest">
+            <summary>Replaces the schedule of a job with the provided schedule. This method supports patch
+            semantics.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Coordinate.v1.Data.Schedule,System.String,System.UInt64)">
+            <summary>Constructs a new Patch request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.TeamId">
+            <summary>Team ID</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.JobId">
+            <summary>Job number</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.AllDay">
+            <summary>Whether the job is scheduled for the whole day. Time of day in start/end times is ignored if
+            this is true.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.StartTime">
+            <summary>Scheduled start time in milliseconds since epoch.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.Duration">
+            <summary>Job duration in milliseconds.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.EndTime">
+            <summary>Scheduled end time in milliseconds since epoch.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.PatchRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest">
+            <summary>Replaces the schedule of a job with the provided schedule.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Coordinate.v1.Data.Schedule,System.String,System.UInt64)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.TeamId">
+            <summary>Team ID</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.JobId">
+            <summary>Job number</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.AllDay">
+            <summary>Whether the job is scheduled for the whole day. Time of day in start/end times is ignored if
+            this is true.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.StartTime">
+            <summary>Scheduled start time in milliseconds since epoch.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.Duration">
+            <summary>Job duration in milliseconds.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.EndTime">
+            <summary>Scheduled end time in milliseconds since epoch.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.ScheduleResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.TeamResource">
+            <summary>The "team" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.TeamResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.TeamResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.TeamResource.List">
+            <summary>Retrieves a list of teams for a user.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.TeamResource.ListRequest">
+            <summary>Retrieves a list of teams for a user.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.TeamResource.ListRequest.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.TeamResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.TeamResource.ListRequest.Admin">
+            <summary>Whether to include teams for which the user has the Admin role.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.TeamResource.ListRequest.Worker">
+            <summary>Whether to include teams for which the user has the Worker role.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.TeamResource.ListRequest.Dispatcher">
+            <summary>Whether to include teams for which the user has the Dispatcher role.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.TeamResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.TeamResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.TeamResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.WorkerResource">
+            <summary>The "worker" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Coordinate.v1.WorkerResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.WorkerResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.WorkerResource.List(System.String)">
+            <summary>Retrieves a list of workers in a team.</summary>
+            <param name="teamId">Team ID</param>
+        </member>
+        <member name="T:Google.Apis.Coordinate.v1.WorkerResource.ListRequest">
+            <summary>Retrieves a list of workers in a team.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.WorkerResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="M:Google.Apis.Coordinate.v1.WorkerResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.WorkerResource.ListRequest.TeamId">
+            <summary>Team ID</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.WorkerResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.WorkerResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Coordinate.v1.WorkerResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+    </members>
+</doc>

@@ -35,6 +35,7 @@ namespace SocLoc_project_WP
             DatabaseHandler.WhenErrorOccurs += DatabaseHandler_WhenErrorOccurs;
         }
 
+
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
@@ -306,6 +307,11 @@ namespace SocLoc_project_WP
             geoCord.Latitude = avgLat;
             geoCord.Longitude = avgLong;
             return geoCord;
+        }
+        private void chat_button_Click(object sender, RoutedEventArgs e)
+        {
+            // NavigationService.Navigate(new Uri("/chat.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/chat.xaml", UriKind.Relative));
         }
     }
 

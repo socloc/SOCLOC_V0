@@ -35,6 +35,85 @@ namespace SocLoc_project_WP
                 HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/user/login?email=" + userName + "&password=" + password, UriKind.Absolute));
                 IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(turnOnLoginEvent), httpRequest);
         }
+        public static void chat_send(int userID, string receiver_id, string message)
+        {
+
+            //HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/user/"+ userID + "/message/add?receiver_id=" + receiver_id + "&contents=" + message, UriKind.Absolute));
+            HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/user/1/message/add?receiver_id=" + receiver_id + "&contents=" + message, UriKind.Absolute));
+
+            IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(runGiveLocationEvent), httpRequest);
+        }
+
+
+        public static void chat_message_receive(string email, string email_to, string message)
+        {
+            HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/user/3/messagesSent", UriKind.Absolute));
+            IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(getAllmessage), httpRequest);
+
+        }
+
+
+        private static void getAllmessage(IAsyncResult result)
+        {
+            try
+            {
+                HttpWebRequest httpRequest = (HttpWebRequest)result.AsyncState;
+                WebResponse webResponse = httpRequest.EndGetResponse(result);
+
+                Stream stream = webResponse.GetResponseStream();
+                StreamReader streamReader = new StreamReader(stream);
+                string text = streamReader.ReadToEnd();
+
+                if (text == "")
+                {
+                    isThereFriendsLoc = false;
+                    //WhenNoFriends();
+                }
+                else
+                {
+                    //List<message> message_list = new List<message>();
+                    var message_list = new List<Tuple<string, string>>();
+
+                    string[] words = text.Split('{');
+                    const string patternForClassify = @".*user_id"":(.*),""receiver_id"":""(.*)"",""contents"":""(.*)"",""created_at.*";
+                    Regex rExtractToClassify = new Regex(patternForClassify, RegexOptions.IgnoreCase);
+                    Match mExtract;
+                    Group g0;
+                    Group g1;
+                    Group g2;
+                    Group g3;
+
+                    for (int i = 1; i < words.Length; i++)
+                    {
+                        mExtract = rExtractToClassify.Match(words[i]);
+                        g1 = mExtract.Groups[1];
+                        g2 = mExtract.Groups[2];
+                        g3 = mExtract.Groups[3];
+                        int usrID = Int16.Parse(g1.ToString());
+                        string receiver_id = g2.ToString();
+                        string contents = g3.ToString();
+                        //UnknownUser unkUs = new UnknownUser(usrID, receiver_id, contents);
+                        //unknownList.Add(unkUs);
+                        message_list.Add(Tuple.Create(receiver_id, contents));
+                    }
+                    //WhenAllLoc(unknownList);
+                }
+                streamReader.Dispose();
+            }
+            catch (WebException ex)
+            {
+                WhenErrorOccurs(ex.ToString());
+            }
+        }
+        
+
+
+
+
+
+
+
+
 
         private static void turnOnLoginEvent(IAsyncResult result)
         {
@@ -189,6 +268,8 @@ namespace SocLoc_project_WP
             IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(getNameEvent), httpRequest);
 
         }
+
+
 
         private static void getNameEvent(IAsyncResult result)
         {
