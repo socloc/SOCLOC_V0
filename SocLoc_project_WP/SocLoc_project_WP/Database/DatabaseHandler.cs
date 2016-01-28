@@ -1,4 +1,5 @@
 ﻿using Microsoft.Phone.Controls;
+using SocLoc_project_WP.Chat;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,7 +35,162 @@ namespace SocLoc_project_WP
         {
                 HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/user/login?email=" + userName + "&password=" + password, UriKind.Absolute));
                 IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(turnOnLoginEvent), httpRequest);
+            //chat_class.no = 8;
+
         }
+        public static void chat_send(string receiver_id, string message)
+        {
+            if (chat_class.name == "")
+            {
+                chat_class.name = "7";
+            }
+
+            HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/user/"+chat_class.name+"/message/add?receiver_id=" + receiver_id + "&contents=" + message, UriKind.Absolute));
+               // HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/user/" + chat_class.no + "/message/add?receiver_id=" + receiver_id + "&contents=" + message, UriKind.Absolute));
+
+            IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(runGiveLocationEvent), httpRequest);
+        }
+
+
+        public static void chat_message_receive()
+        {
+            if (chat_class.name == "")
+            {
+                chat_class.name = "7";
+            }
+            HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/user/" + chat_class.name + "/messagesSent", UriKind.Absolute));
+            IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(getAllmessage), httpRequest);
+
+        }
+
+        public static void chat_message_receive1()
+        {
+            if (chat_class.name == "")
+            {
+                chat_class.name = "7";
+            }
+            HttpWebRequest httpRequest = HttpWebRequest.CreateHttp(new Uri("http://socloc.chrix.eu/servlets/user/" + chat_class.name + "/messagesReceived", UriKind.Absolute));
+            IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(getAllmessage1), httpRequest);
+
+        }
+
+
+        private static void getAllmessage(IAsyncResult result)
+        {
+            try
+            {
+                HttpWebRequest httpRequest = (HttpWebRequest)result.AsyncState;
+                WebResponse webResponse = httpRequest.EndGetResponse(result);
+
+                Stream stream = webResponse.GetResponseStream();
+                StreamReader streamReader = new StreamReader(stream);
+                string text = streamReader.ReadToEnd();
+
+                if (text == "")
+                {
+                    //WhenNoFriends();
+                    chat_class.message1 = "no message";
+                }
+                else
+                {
+                    chat_class.message1="";
+                    String pattern = @".*contents"":(.*),""created_at""";
+                    Match m = Regex.Match(text, pattern);
+                    int r_count = Regex.Matches(text, ",\"contents\":").Count;
+
+                    chat_class.message1 = "\nNewest message:\n"+Regex.Match(text, @".*created_at"":(.*),""updated_at""").Groups[1].Value + "\nFrom me to " +
+                                          Regex.Match(text, @".*receiver_id"":(.*),""contents""").Groups[1].Value + ": " +
+                                          Regex.Match(text, @".*contents"":(.*),""created_at""").Groups[1].Value;
+                    
+                   /* chat_class.message1 = Regex.Match(text, @".*created_at"":(.*),""updated_at""").Groups[1].Value + "\nFrom me to " +
+                                          Regex.Match(text, @".*receiver_id"":(.*),""contents""").Groups[1].Value + ": " +
+                                          Regex.Match(text, @".*contents"":(.*),""created_at""").Groups[1].Value;*/
+                  
+                   // String pattern1 = @".*created_at"":(.*),""updated_at""";
+                   // String pattern2 = @".*receiver_id"":(.*),""contents""";
+                   // String pattern3 = @".*contents"":(.*),""created_at""";
+                    /*string[] xt = new string[r_count];
+                    string[] yt = new string[r_count];
+                    string[] zt = new string[r_count];
+
+                    foreach (Match x in Regex.Matches(text, pattern1))
+                        xt[x.Index]=x.Value;
+                    foreach (Match y in Regex.Matches(text, pattern2))
+                        yt[y.Index] = y.Value;
+                    foreach (Match z in Regex.Matches(text, pattern3))
+                        zt[z.Index] = z.Value;
+                    chat_class.message1 = xt[1] + yt[2]+ "x";
+                    for (int i = 1; i < r_count; i++)
+                    {
+                        if (i == 1)
+                        {
+                                     chat_class.message1 =
+                                     Regex.Match(text, @".*created_at"":(.*),""updated_at""").Groups[1].Value + "\nFrom me to " +
+                                     Regex.Match(text, @".*receiver_id"":(.*),""contents""").Groups[1].Value + ": " +
+                                     Regex.Match(text, @".*contents"":(.*),""created_at""").Groups[1].Value;
+                        }
+                        else
+                        {
+                                     chat_class.message1 = chat_class.message1 + "\n" +
+                                     Regex.Match(text, @".*created_at"":(.*),""updated_at""").Groups[1].Value + "\nFrom me to " +
+                                     Regex.Match(text, @".*receiver_id"":(.*),""contents""").Groups[1].Value + ": " +
+                                     Regex.Match(text, @".*contents"":(.*),""created_at""").Groups[1].Value;
+                        }
+                    }*/
+                }
+                streamReader.Dispose();
+            }
+            catch (WebException ex)
+            {
+                WhenErrorOccurs(ex.ToString());
+            }
+        }
+
+
+
+        private static void getAllmessage1(IAsyncResult result)
+        {
+            try
+            {
+                HttpWebRequest httpRequest = (HttpWebRequest)result.AsyncState;
+                WebResponse webResponse = httpRequest.EndGetResponse(result);
+
+                Stream stream = webResponse.GetResponseStream();
+                StreamReader streamReader = new StreamReader(stream);
+                string text = streamReader.ReadToEnd();
+
+                if (text == "")
+                {
+                    //WhenNoFriends();
+                    chat_class.message2 = "no message";
+
+                }
+                else
+                {
+                    chat_class.message2 = "";
+                    String pattern = @".*contents"":(.*),""created_at""";
+                    Match m = Regex.Match(text, pattern);
+
+
+
+                    chat_class.message2 = "\nNewest message:\n" + Regex.Match(text, @".*created_at"":(.*),""updated_at""").Groups[1].Value + "\nFrom " +
+                                              Regex.Match(text, @".*sender_id"":(.*),""receiver_id""").Groups[1].Value + ": " +
+                                              Regex.Match(text, @".*contents"":(.*),""created_at""").Groups[1].Value;
+
+                }
+                streamReader.Dispose();
+            }
+            catch (WebException ex)
+            {
+                WhenErrorOccurs(ex.ToString());
+            }
+        }
+
+
+
+
+
+
 
         private static void turnOnLoginEvent(IAsyncResult result)
         {
@@ -49,8 +205,9 @@ namespace SocLoc_project_WP
                 lines.Add(streamReader.ReadLine());
                 if (lines[0] != "0")
                     {
-                        userId = Int32.Parse(lines[0]);
-                        authentification = true;
+                    userId = Int32.Parse(lines[0]);
+                     chat_class.name = userId.ToString();
+                    authentification = true;
                         WhenDownloaded_whenLog();
                 }
                     else
@@ -189,6 +346,8 @@ namespace SocLoc_project_WP
             IAsyncResult result = (IAsyncResult)httpRequest.BeginGetResponse(new AsyncCallback(getNameEvent), httpRequest);
 
         }
+
+
 
         private static void getNameEvent(IAsyncResult result)
         {

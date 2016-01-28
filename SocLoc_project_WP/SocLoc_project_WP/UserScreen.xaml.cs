@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Collections.Generic;
+using SocLoc_project_WP.Chat;
 
 namespace SocLoc_project_WP
 {
@@ -17,6 +18,7 @@ namespace SocLoc_project_WP
     {
         string userName;
         int userId;
+        static int userid1;
         IntervalGetter intervalGetter;
         public Geoposition lastGeoposition = null;
         private List<Friend> listWithFriendsLoc = new List<Friend>();
@@ -34,6 +36,7 @@ namespace SocLoc_project_WP
             DatabaseHandler.WhenAllLoc += DatabaseHandler_WhenAllLoc;
             DatabaseHandler.WhenErrorOccurs += DatabaseHandler_WhenErrorOccurs;
         }
+
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
@@ -272,8 +275,7 @@ namespace SocLoc_project_WP
             textBlock.Foreground = new SolidColorBrush(Colors.Red);
             textBlock.FontSize = 30;
             textBlock.FontWeight = FontWeights.Bold;
-
-            if(locOtherUser.name != "")
+            if (locOtherUser.name != "")
                 textBlock.Text = locOtherUser.name;
             else
                 textBlock.Text = locOtherUser.os_userID.ToString();
@@ -306,6 +308,12 @@ namespace SocLoc_project_WP
             geoCord.Latitude = avgLat;
             geoCord.Longitude = avgLong;
             return geoCord;
+        }
+        private void chat_button_Click(object sender, RoutedEventArgs e)
+        {
+            //chat_class.no = userId;
+            // NavigationService.Navigate(new Uri("/chat.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/chat.xaml", UriKind.Relative));
         }
     }
 
