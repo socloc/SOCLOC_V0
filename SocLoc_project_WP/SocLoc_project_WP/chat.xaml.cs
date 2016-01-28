@@ -7,8 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-
-
+using SocLoc_project_WP.Chat;
 
 namespace SocLoc_project_WP
 {
@@ -16,8 +15,6 @@ namespace SocLoc_project_WP
 
     public partial class chat : UserControl
     {
-        int userId;
-        string userName;
 
 
 
@@ -41,7 +38,7 @@ namespace SocLoc_project_WP
             if (receiver_id != null && message != null)
             {
               
-                DatabaseHandler.chat_send(userId, receiver_id, message);
+                DatabaseHandler.chat_send(receiver_id, message);
 
             }
 
@@ -61,17 +58,10 @@ namespace SocLoc_project_WP
 
         private void refresh_Click(object sender, RoutedEventArgs e)
         {
-
-
-            /*string text = "[{*id*:3,*sender_id*:3,*receiver_id*:2,*contents*:*Tresc mojej wiadomosci*,*created_at*:*2016-01-26 13:30:58*,*updated_at*:*2016-01-26 13:30:58*}";
-            char[] delimiterChars = { ' ', ',', '.', ':', '*' };
-            string[] words = text.Split(delimiterChars);
-
-            foreach (string s in words)
-            {
-                my_messages.Text = my_messages.Text + '\n' + s;
-            }*/
-
+            DatabaseHandler.chat_message_receive();
+            DatabaseHandler.chat_message_receive1();
+            received_messages.Text = chat_class.message2;
+            sent_messages.Text = chat_class.message1;
 
 
         }
