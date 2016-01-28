@@ -1,77 +1,119 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>MAC</Machine>
-    <WindowsUser>maciek</WindowsUser>
+    <Machine>CHRIS</Machine>
+    <WindowsUser>kfeng_000</WindowsUser>
     <TargetPlatformIdentifier>Windows Phone</TargetPlatformIdentifier>
     <TargetOsVersion>6.3</TargetOsVersion>
     <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>a30282ef-8ec4-49eb-8d60-d39468bd41c4</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Bin\Debug\SocLoc_project_WP.dll">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Bin\Debug\SocLoc_project_WP.dll">
       <PackagePath>SocLoc_project_WP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\ServiceReferences.ClientConfig">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.dll">
+      <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.Extensions.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.Extensions.Phone.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.Phone.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.dll">
+      <PackagePath>System.Net.Http.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Zlib.Portable.Signed.1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.dll">
+      <PackagePath>Zlib.Portable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.xml">
+      <PackagePath>Microsoft.Threading.Tasks.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.Extensions.xml">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.Extensions.Phone.xml">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.Phone.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.xml">
+      <PackagePath>System.Net.Http.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Extensions.xml">
+      <PackagePath>System.Net.Http.Extensions.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Primitives.xml">
+      <PackagePath>System.Net.Http.Primitives.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\packages\Zlib.Portable.Signed.1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.xml">
+      <PackagePath>Zlib.Portable.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\ServiceReferences.ClientConfig">
       <PackagePath>ServiceReferences.ClientConfig</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\AlignmentGrid.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\AlignmentGrid.png">
       <PackagePath>Assets\AlignmentGrid.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\ApplicationIcon.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\ApplicationIcon.png">
       <PackagePath>Assets\ApplicationIcon.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\BadgeLogo.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\BadgeLogo.png">
       <PackagePath>Assets\BadgeLogo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\SquareTile150x150.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\SquareTile150x150.png">
       <PackagePath>Assets\SquareTile150x150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\SquareTile71x71.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\SquareTile71x71.png">
       <PackagePath>Assets\SquareTile71x71.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\WideLogo.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\WideLogo.png">
       <PackagePath>Assets\WideLogo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\FlipCycleTileLarge.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\FlipCycleTileLarge.png">
       <PackagePath>Assets\Tiles\FlipCycleTileLarge.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\FlipCycleTileMedium.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\FlipCycleTileMedium.png">
       <PackagePath>Assets\Tiles\FlipCycleTileMedium.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\FlipCycleTileSmall.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\FlipCycleTileSmall.png">
       <PackagePath>Assets\Tiles\FlipCycleTileSmall.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\IconicTileMediumLarge.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\IconicTileMediumLarge.png">
       <PackagePath>Assets\Tiles\IconicTileMediumLarge.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\IconicTileSmall.png">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Assets\Tiles\IconicTileSmall.png">
       <PackagePath>Assets\Tiles\IconicTileSmall.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\maciek\Documents\Visual Studio 2015\Projects\SOCLOC_V0\SocLoc_project_WP\SocLoc_project_WP\Bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\kfeng_000\Desktop\SOCLOC_V0-release-zmergowane\SOCLOC_V0-release-zmergowane\SocLoc_project_WP\SocLoc_project_WP\Bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
